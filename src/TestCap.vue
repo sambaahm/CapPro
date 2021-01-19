@@ -92,7 +92,14 @@ export default {
   <div class='testapp'>
 
     <div class='testapp-sidebar'>
-      
+        <div class='testapp-sidebar-section-menu'>
+        <label>
+          <button onclick="">Acceuil</button><br/>
+          <button onclick="">Utilisateur</button><br/>
+          <button onclick="">notifications</button><br/>
+          <button onclick="">Parameteres</button>
+        </label>
+      </div>
       <div class='testapp-sidebar-section'>
         <label>
           <input
@@ -117,8 +124,6 @@ export default {
       <FullCalendar
         class='testapp-calendar'
         :options='calendarOptions'
-      
-        
       >
         <template v-slot:eventContent='arg'>
           <b>{{ arg.timeText }}</b>
@@ -167,7 +172,17 @@ b { /* used for event dates/times */
 .testapp-sidebar-section {
   padding: 2em;
 }
-
+.testapp-sidebar-section-menu {
+  background-color: #eaf9ff;
+  border: black;
+  color: black;
+  padding: 2em;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
 .testapp-main {
   flex-grow: 1;
   padding: 3em;
