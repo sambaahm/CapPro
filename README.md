@@ -1,7 +1,6 @@
 
 ## Installation
 ```bash
-cd cappro/vue
 npm install
 ```
 
