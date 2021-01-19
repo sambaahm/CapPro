@@ -9,7 +9,8 @@ import { INITIAL_EVENTS, createEventId } from './event-utils'
 export default {
 
   components: {
-    FullCalendar
+    FullCalendar,
+   
      
   },
 
@@ -50,6 +51,7 @@ export default {
   },
 
   methods: {
+    
 
     handleWeekendsToggle() {
       this.calendarOptions.weekends = !this.calendarOptions.weekends // affichage du weekend
@@ -86,7 +88,9 @@ export default {
 </script>
 
 <template>
+
   <div class='testapp'>
+
     <div class='testapp-sidebar'>
       
       <div class='testapp-sidebar-section'>
