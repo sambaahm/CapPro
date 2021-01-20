@@ -16,7 +16,8 @@
     "@fullcalendar/vue": "^5.5.0",
     "style-loader": "^2.0.0",
     "vue": "^2.6.12",
-    "vue-dynamic-dropdown": "^1.0.12"
+    "vue-dynamic-dropdown": "^1.0.12",
+    "vue-router": "^3.4.9"
   },
   "devDependencies": {
     "css-loader": "^4.3.0",

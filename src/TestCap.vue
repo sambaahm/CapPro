@@ -90,14 +90,15 @@ export default {
 <template>
 
   <div class='testapp'>
-
+<router-view/>
     <div class='testapp-sidebar'>
         <div class='testapp-sidebar-section-menu'>
         <label>
-          <button onclick="">Acceuil</button><br/>
-          <button onclick="">Utilisateur</button><br/>
-          <button onclick="">notifications</button><br/>
-          <button onclick="">Parameteres</button>
+          <button onclick="window.location.href = TestCap.vue" >Acceuil</button><br/>
+          <button onclick="window.location.href = Utilisateur.vue">Utilisateur</button><br/>
+          <button onclick="window.location.href = Notifications">Notifications</button><br/>
+          <button onclick="window.location.href = Parameteres">Parameteres</button>
+          
         </label>
       </div>
       <div class='testapp-sidebar-section'>
