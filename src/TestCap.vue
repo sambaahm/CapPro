@@ -6,12 +6,11 @@ import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
 import { INITIAL_EVENTS, createEventId } from './event-utils'
 
+
 export default {
 
   components: {
     FullCalendar,
-   
-     
   },
 
   data: function() {
@@ -31,9 +30,9 @@ export default {
                 today: 'Aujourd\'hui',
                 month: 'Mois',
                 week: 'Semaine',
-                day: 'Jour',
-                
+                day: 'Jour',   
             },
+            
         initialView: 'timeGridDay',
         //initialEvents: INITIAL_EVENTS, 
         editable: true,
@@ -84,23 +83,39 @@ export default {
       this.currentEvents = events
     }
   }
+  
 }
 </script>
 
 <template>
 
   <div class='testapp'>
-<router-view/>
+
     <div class='testapp-sidebar'>
         <div class='testapp-sidebar-section-menu'>
+
+        <img src="https://media-exp1.licdn.com/dms/image/C4D0BAQHYyaiHKZxWkw/company-logo_200_200/0/1555486766503?e=1619049600&amp;v=beta&amp;t=bYggFxmZFNLHnMKqtP7Gto2w7dUQGyjbBIzzAxZ0U-U" loading="lazy" alt="Logo de COLAS DIGITAL SOLUTIONS" id="ember62" class="lazy-image ember-view org-top-card-primary-content__logo" title="" style="--darkreader-inline-outline:#ac2622;"/>
+
         <label>
-          <button onclick="window.location.href = TestCap.vue" >Acceuil</button><br/>
-          <button onclick="window.location.href = Utilisateur.vue">Utilisateur</button><br/>
-          <button onclick="window.location.href = Notifications">Notifications</button><br/>
-          <button onclick="window.location.href = Parameteres">Parameteres</button>
-          
+
+         <!-- <button onclick="" style="width:42%;float:center;">Acceuil</button><br/>
+
+          <button onclick="" style="width:42%;float:center;">Utilisateur</button><br/>
+
+          <button onclick="" style="width:42%;float:center;">notifications</button><br/>
+
+          <button onclick="" style="width:42%;float:center;">Parameteres</button>
+          -->
+           <router-link to="{ name: '' }">Acceuil</router-link><br/>
+            <router-link to="{ name: 'Utilisateur' }">Utilisateur</router-link><br/>
+           <router-link to="{ name: 'Notifications' }">Notifications</router-link><br/>
+          <router-link to="{ name: 'parameteres' }">parameteres</router-link>
+          <router-view></router-view>
         </label>
+
       </div>
+
+ 
       <div class='testapp-sidebar-section'>
         <label>
           <input
@@ -115,8 +130,8 @@ export default {
         <h2>tout les evenements ({{ currentEvents.length }})</h2>
         <ul>
           <li v-for='event in currentEvents' :key='event.id'>
-            <b>{{ event.startStr }}</b>
-            <i>{{ event.title }}</i>
+            <!--<b>{{ event.startStr }}</b>-->
+           <!-- <i>{{ event.title }}</i>-->
           </li>
         </ul>
       </div>
@@ -131,6 +146,7 @@ export default {
           <i>{{ arg.event.title }}</i>
         </template>
       </FullCalendar>
+     
     </div>
   </div>
 </template>

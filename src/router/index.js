@@ -1,25 +1,27 @@
 import Vue from 'vue'
-import router from 'vue-router'
+import Router from 'vue-router'
+//import Utilisateur from '@/components/Utilisateur'
 
 
-Vue.use(router)
+
+Vue.use(Router)
 
 export default new Router({
     routes: [
         {
-            path: '/Utilisateur',
+            path: '/componenets',
             name: 'Utilisateur',
-            component: Utilisateur
+            
         },
         {
-            path: '/Notifications',
+            path: '/componenets',
             name: 'Notifications',
-            component: Notifications
+            
         }
         ,{
-            path: '/parameteres',
+            path: '/componenets',
             name: 'parameteres',
-            component: Parameteres
+            
         }
     ]
 })
